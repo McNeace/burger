@@ -1,0 +1,66 @@
+<br>
+<div class="container">
+  <div class="text-center">
+    <span>
+      <div class="row">
+        <div class="col-md">
+          <h1 id="title-header" class="move-me">Eat</h1>
+          <h1 id="title-header" class="move-me-some">- Beautiful -</h1>
+          <h1 id="title-header" class="move-me-more">Burgers!!!</h1>
+          <br>
+        </div>
+    </span><br>
+
+    <div class="container">
+      <div class="text-center">
+        <form class="create-form">
+
+          <div class="text-center" id="input">
+            <label for="burger">Enter Burger    :</label>
+            <input type="text" id="burger" name="burger_name">
+          </div>
+          <div class="container">
+            <div class="form-group">
+              <label for="devoured">Devoured or To Be Devoured??? Tis the Question</label><br>
+              <input type="checkbox" name="devoured" value="0" checked>To be Devoured!
+              <input type="checkbox" name="devoured" value="1">Devoured!
+            </div>
+
+          </div><br>
+
+          <button type="submit" class="btn btn-primary">Add Burger</button>
+          <br><br />
+        </form>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <h2 class="text-center">To Be Devoured:</h2>
+    </div>
+  </div>
+  <ul>
+    {{#each burgers}}
+    {{#unless devoured}}
+    <p>{{id}}. {{burger_name}}
+      <span><button class="devour-state" data-id="{{id}}" data-devour=true>
+          {{#if devoured}}devoured!{{else}}Devour Me!{{/if}}
+        </button></span>
+    </p>
+    {{/unless}}
+    {{/each}}
+  </ul>
+  <br>
+  <h2 class="text-center">Devoured:</h2>
+
+  <ul>
+    {{#each burgers}}
+    {{#if devoured}}
+    <p>{{id}}. {{burger_name}}
+      <span><button class="burger-delete" data-id="{{id}}" data-devour=true>
+          {{#if devoured}}Delete!{{else}}{{/if}}
+        </button></span>
+    </p>
+    {{/if}}
+    {{/each}}
+  </ul>
+</div>

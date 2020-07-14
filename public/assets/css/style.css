@@ -1,0 +1,52 @@
+body {
+  background: grey;
+  font-size: larger;
+  color: black;
+  
+}
+
+.move-me {
+  margin-right: 220px;
+}
+
+.move-me-some {
+  margin-left: 10px;
+}
+
+.move-me-more {
+  margin-left: 300px;
+}
+
+ul {
+  font-size: larger;
+  padding: 2px;
+  margin: 2px;
+  background-color: #d84242;
+  border-style: dotted;
+  border-width: 8px;
+}
+
+.btn {
+  font-size: larger;
+  background-color:#d84242;
+}
+.btn:hover {
+  background-color:#913f92;
+}
+
+
+#input {
+  font-size: large;
+}
+
+.form-group {
+  font-size: larger;
+  margin-bottom: 5px;
+  background-color:#d84242;
+  border-style: dotted;
+  border-width: 8px;
+}
+
+#burger {
+  margin-left: 50px;
+}
